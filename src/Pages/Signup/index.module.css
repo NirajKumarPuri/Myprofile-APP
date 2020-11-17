@@ -1,0 +1,105 @@
+.content{
+    width: 90%;
+    height: 400px;
+    margin:40px 0;
+    border: solid 1px wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    background-color: wheat;
+    border-radius: 25px;
+}
+.text1{
+    width: 50%;
+    font-size: 20px;
+}
+.text2{
+    width: 28%;
+    font-size: 16px;
+}
+.contentbox1{
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: red;
+    text-align: center;
+}
+.heading{
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.contentbox2{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hemail{
+    font-size: 32px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.hpassword{
+    font-size: 32px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.contentbox3{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contentbox4{
+    width: 40%;
+    margin-bottom: 20px;
+}
+.button:hover{
+    background-color: green;
+}
+.button{
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+}
+.cb5text{
+    font-size: 20px;
+}
+.link{
+    font-size: 20px;
+    font-weight: 800;
+}
+@media(min-width:768px){
+    .content{
+        width: 60%;
+    }
+    .text2{
+        width: 36%;
+        font-size: 24px;
+    }
+}
+@media(min-width:1024px){
+    .text2{
+        width: 42%;
+    }
+    .button{
+        width: 60%;
+    }
+    .contentbox2{
+        margin-left: 100px;
+    }
+    .contentbox3{
+        margin-left: 100px;
+    }
+    .contentbox4{
+        text-align: center;
+    }
+    .contentbox5{
+        width: 100%;
+        text-align: center;
+    }
+}
