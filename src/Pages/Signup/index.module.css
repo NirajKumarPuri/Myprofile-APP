@@ -1,105 +1,92 @@
+.container{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(skyblue,#6d47d9);
+    
+}
 .content{
     width: 90%;
-    height: 400px;
-    margin:40px 0;
+    margin:80px 0;
+    height: 70vh;
     border: solid 1px wheat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
-    background-color: wheat;
-    border-radius: 25px;
-}
-.text1{
-    width: 50%;
-    font-size: 20px;
-}
-.text2{
-    width: 28%;
-    font-size: 16px;
-}
-.contentbox1{
-    width: 100%;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    background-color: red;
-    text-align: center;
+    background-color:whitesmoke;
+    
 }
 .heading{
-    margin: 0px;
-    font-size: 40px;
-    font-weight: 600;
-    font-family: sans-serif;
+    margin: 20px 0;
 }
-
 .contentbox2{
-    width: 100%;
-    margin-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px 0;
 }
 .hemail{
-    font-size: 32px;
-    font-weight: 600;
-    font-family: sans-serif;
-}
-.hpassword{
-    font-size: 32px;
-    font-weight: 600;
-    font-family: sans-serif;
+    font-size: 24px;
 }
 .contentbox3{
-    width: 100%;
-    margin-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.hpassword{
+    font-size: 24px;
 }
 .contentbox4{
-    width: 40%;
-    margin-bottom: 20px;
-}
-.button:hover{
-    background-color: green;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 .button{
-    width: 80%;
-    height: 40px;
+    width: 60%;
     font-size: 20px;
+    border: none;
+    background-color: skyblue;
 }
-.cb5text{
-    font-size: 20px;
+.contentbox5{
+    margin: 20px 0;
 }
 .link{
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 16px;
+    color: skyblue;
+    font-weight: 600;
 }
 @media(min-width:768px){
     .content{
         width: 60%;
     }
+    .contentbox2{
+        width: 100%;
+        padding-left: 190px;
+    }
+    .text1{
+        width: 56%;
+    }
+    .contentbox3{
+        width: 100%;
+        padding-left: 190px;
+    }
     .text2{
-        width: 36%;
-        font-size: 24px;
+        width: 56%;
     }
 }
 @media(min-width:1024px){
-    .text2{
-        width: 42%;
-    }
-    .button{
-        width: 60%;
-    }
     .contentbox2{
-        margin-left: 100px;
+        padding-left: 330px;
+    }
+    .text1{
+        width: 58%;
+    }
+    .text2{
+        width: 58%;
     }
     .contentbox3{
-        margin-left: 100px;
+        padding-left: 330px;
     }
-    .contentbox4{
-        text-align: center;
+    .cb5text{
+        font-size: 20px;
     }
-    .contentbox5{
-        width: 100%;
-        text-align: center;
+    .link{
+        font-size: 20px;
     }
 }

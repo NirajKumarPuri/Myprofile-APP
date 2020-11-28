@@ -29,19 +29,20 @@ class Signup extends React.Component{
 
       }).then((res)=>{
           if(res.ok){
-              console.log(this.props.history)
+        
               this.props.history.push('/Dashboard')
           }
           return res.json()
       }).then((result)=>{console.log(result)})}
     render(){
     return(
+        <div className={styles.container}>
         <div className={styles.content}>
             <div className={styles.contentbox1}>
                 <h1 className={styles.heading}>Sign Up</h1>
             </div>
             <div className={styles.contentbox2}>
-                <span className={styles.hemail}>Email:-</span>
+                <span className={styles.hemail}>Email</span><br/>
                 <input 
                  autoComplete="off"
                 onChange={this.handlechange} 
@@ -50,7 +51,7 @@ class Signup extends React.Component{
                   name="email" type="text" placeholder="Enter Email" autoFocus/>
                 </div>
                 <div className={styles.contentbox3}>
-                <span className={styles.hpassword}>Password:-</span>
+                <span className={styles.hpassword}>Password</span><br/>
                 <input className={styles.text2}
                  autoComplete="off"
                 onChange={this.handlechange} 
@@ -64,9 +65,10 @@ class Signup extends React.Component{
             </div>
         <div className={styles.contentbox5}>
             <span className={styles.cb5text}>Already a member?</span>
-            <button className={styles.link} onClick={()=>{this.props.history.push('/login')}}>Log In</button>
+            <Link className={styles.link} onClick={()=>{this.props.history.push('/login')}}>Log In</Link>
         </div>
         
+        </div>
         </div>
     )
 }
