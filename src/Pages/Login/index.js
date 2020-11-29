@@ -7,6 +7,7 @@ class Login extends React.Component {
         this.state = {
             email: '',
             password: '',
+            errorMsg: ''
         }
     }
     handlechange = (e) => {
@@ -26,14 +27,17 @@ class Login extends React.Component {
                 returnSecureToken: true,
             })
         }).then((res) => {
-            // if (res.ok) {
-            //     // this.props.history.push('/Dashboard')
-            // }
             return res.json()
         }).then((result) => {
-            console.log(result)
-            window.sessionStorage.setItem('token', result.idToken)
-            this.props.history.push('/Dashboard')
+            console.log('Result : ', result);
+
+            if (!result.error) {
+                window.sessionStorage.setItem('token', result.idToken)
+                this.props.history.push('/Dashboard')
+            }
+            else {
+                this.setState({ errorMsg: result.error.message })
+            }
         })
     }
     render() {
@@ -65,8 +69,10 @@ class Login extends React.Component {
 
                     </div>
                     <div className={styles.contentbox4}>
-                        <button type="submit" onClick={this.handleclick} className={styles.button}>Login</button>
-
+                        <button type="submit" onClick={this.handleclick} className={styles.button}>Login</button><br />
+                        {
+                            this.state.errorMsg ? <span className={styles.errorMessage}>{this.state.errorMsg}</span> : null
+                        }
                     </div>
                     <div className={styles.contentbox5}>
                         <span className={styles.cb5heading}>Not a member?</span>

@@ -45,6 +45,11 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+.errorMessage{
+    color: red;
+}
+
 @media(min-width:768px){
     .content{
         width: 60%;
@@ -67,3 +72,4 @@
         width: 52%;
     }
 }
+

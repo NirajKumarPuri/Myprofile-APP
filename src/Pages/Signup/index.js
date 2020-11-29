@@ -13,7 +13,6 @@ class Signup extends React.Component {
     handlechange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
-
         })
     }
     handleclick = () => {
